@@ -1,0 +1,36 @@
+package com.javarush.task.jdk13.task07.task0705;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+/* 
+Один большой массив и два маленьких
+*/
+
+public class Solution{
+    public static void main(String[] args) throws Exception {
+        //напишите тут ваш код
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        
+        int[] masiv = new int[20];
+        
+        for (int i=0; i<20; i++)
+        {
+            String s = bufferedReader.readLine();
+            int numbers =Integer.parseInt(s);
+            masiv[i]=numbers;
+        }
+        
+        int[] masiv1 = new int[10];
+        int[] masiv2 = new int[10];
+        
+        for (int i =0; i<10; i++)
+            masiv1[i]=masiv[i];
+            
+                    for (int i =10; i<20; i++)
+            masiv2[i-10]=masiv[i];
+        
+    for (int i=0; i<masiv2.length; i++)
+        System.out.println(masiv2[i]);
+}
+}
